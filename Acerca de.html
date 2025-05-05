@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="etilos.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        // Cargar el encabezado desde header.html
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div style="
+        display: flex; 
+        justify-content: center; 
+        align-items: flex-start; 
+        height: 100vh; 
+        background-color: white; 
+        padding-top: 70px;"> <!-- Ajuste de padding-top para no superponer el encabezado -->
+        <h1 style="
+            text-align: center; 
+            background-color: lightgray; 
+            display: inline-block; 
+            padding: 10px 20px; 
+            border-radius: 5px;">
+            Acerca de nosotros <!-- Esto es el texto que aparece -->
+        </h1>
+    </div>
+</body>
+</html>
